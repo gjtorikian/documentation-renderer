@@ -1,0 +1,16 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  '.overlayer':
+      'Enable docs-render': 'docs-render:toggle'
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'docs-render'
+      'submenu': [
+        { 'label': 'Toggle', 'command': 'docs-render:toggle' }
+      ]
+    ]
+  }
+]
