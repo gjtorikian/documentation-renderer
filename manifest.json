@@ -1,0 +1,15 @@
+{
+  "name": "DocsTools",
+  "version": "0.0.1",
+  "description": "Render documentation the right way on GitHub.com",
+  "manifest_version": 2,
+  "content_scripts": [{
+    "matches": [
+      "https://github.com/*/blob/*",
+      "https://github.com/*/edit/*"
+    ],
+    "run_at": "document_end",
+    "css": ["css/docstools.css"],
+    "js": ["js/vendor/jquery-1.9.1.min.js", "js/docstools.js"]
+  }]
+}

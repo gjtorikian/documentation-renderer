@@ -1,13 +1,22 @@
 {
-  "name": "docs-render",
-  "main": "./lib/docs-render",
-  "version": "0.0.0",
-  "description": "A short description of your package",
-  "repository": "https://github.com/atom/docs-render",
+  "name": "documentation-renderer",
+  "main": "./lib/documentation-renderer",
+  "version": "0.1.0",
+  "description": "Renders documentation the right way for Atom",
+  "repository": "https://github.com/gjtorikian/documentation-renderer",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
   },
   "dependencies": {
+    "temp": "0.6.x",
+    "wrench": "1.5.x",
+    "underscore.string": "2.3.x",
+
+    "coffee-script" : "~ 1.6.3",
+    "grunt": "~0.4.1",
+    "grunt-cli": "~0.1.9",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-sass": "~0.5.1"
   }
 }

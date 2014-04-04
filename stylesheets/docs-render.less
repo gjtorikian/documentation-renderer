@@ -1,11 +1,38 @@
-// The ui-variables file is provided by base themes provided by Atom.
-//
-// See https://github.com/atom/atom-dark-ui/blob/master/stylesheets/ui-variables.less
-// for a full listing of what's available.
-@import "ui-variables";
+@border-color      : #ddd;
 
 .markdown-preview {
   .intro { color: #666666; }
+
+  pre.command-line {
+    border: 2px solid @border-color;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    -webkit-font-smoothing: auto;
+
+    em {
+      color: #F9FE64;
+      font-style: italic;
+    }
+
+    .command:before {
+      content: "$ ";
+    }
+
+    .comment {
+      color: #ccc;
+    }
+
+    .output {
+      color: #63E463;
+
+      span {
+        position: fixed;
+        top: -1000px;
+        left: -1000px;
+      }
+    }
+  }
 
   .alert {
     position: relative;
@@ -24,12 +51,16 @@
     /* IE8+ */
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
+
     .alert + .alert {
       margin-top: 5px; }
+
     .alert > *:first-child {
       margin-top: 0; }
+
     .alert > *:last-child {
       margin-bottom: 0; }
+
     .alert.warning {
       color: #613A00;
       background-color: #ffe3c8;
@@ -40,6 +71,7 @@
       -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe3c8', endColorstr='#f5dac0')";
       /* IE8+ */
       border: 1px solid #dca874; }
+
     .alert.error {
       color: #9c2400;
       background-color: #f8d8d8;
@@ -50,61 +82,74 @@
       -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8d8d8', endColorstr='#efd0d0')";
       /* IE8+ */
       border: 1px solid #da9797; }
+
     .alert code {
       font-size: 12px; }
 
-  div.helper {
+  div.helper, div.platform-mac, div.platform-windows, div.platform-linux, div.platform-all {
     margin: .7em 0;
     position: relative;
     border: 1px dashed; }
-    div.helper h4.header {
-      height: 30px;
-      border: 1px solid #eaeaea;
-      border-bottom-color: #cacaca;
-      margin: 0;
-      min-width: 100%; }
-      div.helper h4.header a {
-        display: block;
-        padding: 0 0 0 32px;
-        color: #777;
-        font-size: 12px;
-        line-height: 31px;
-        font-weight: bold;
-        text-shadow: 0 1px 0 white;
-        cursor: pointer;
-        text-decoration: none; }
-    div.helper div.content {
-      padding: 20px;
-      border: solid #eaeaea;
-      border-width: 0 1px 1px 1px; }
-      div.helper div.content > p:first-child, div.helper div.content > h3:first-child {
-        margin-top: 0;
-        padding-top: 0; }
-      div.helper div.content > p:last-child, div.helper div.content > blockquote:last-child {
-        margin-bottom: 0;
-        padding-bottom: 0; }
-      div.helper div.content blockquote {
-        margin: .7em 0; }
-      div.helper div.content img {
-        max-width: 620px; }
 
-    .markdown-body pre.command-line {
-      border: 2px solid #dddddd;
-      background-color: #333;
-      color: #fff;
-      padding: 10px;
-      -webkit-font-smoothing: auto; }
-      .markdown-body pre.command-line em {
-        color: #F9FE64;
-        font-style: italic; }
-      .markdown-body pre.command-line .command:before {
-        content: "$ "; }
-      .markdown-body pre.command-line .comment {
-        color: #ccc; }
-      .markdown-body pre.command-line .output {
-        color: #63E463; }
-        .markdown-body pre.command-line .output span {
-          position: fixed;
-          top: -1000px;
-          left: -1000px; }
+  div.helper h4.header {
+    height: 30px;
+    border: 1px solid #eaeaea;
+    border-bottom-color: #cacaca;
+    margin: 0;
+    min-width: 100%; }
+
+  div.helper h4.header a {
+    display: block;
+    padding: 0 0 0 32px;
+    color: #777;
+    font-size: 12px;
+    line-height: 31px;
+    font-weight: bold;
+    text-shadow: 0 1px 0 white;
+    cursor: pointer;
+    text-decoration: none; }
+
+  div.helper div.content {
+    padding: 20px;
+    border: solid #eaeaea;
+    border-width: 0 1px 1px 1px; }
+
+  div.helper div.content > p:first-child, div.helper div.content > h3:first-child {
+    margin-top: 0;
+    padding-top: 0; }
+
+  div.helper div.content > p:last-child, div.helper div.content > blockquote:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0; }
+
+  div.helper div.content blockquote {
+    margin: .7em 0; }
+
+  div.helper div.content img {
+    max-width: 620px; }
+
+  .markdown-body pre.command-line {
+    border: 2px solid #dddddd;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    -webkit-font-smoothing: auto; }
+
+  .markdown-body pre.command-line em {
+    color: #F9FE64;
+    font-style: italic; }
+
+  .markdown-body pre.command-line .command:before {
+    content: "$ "; }
+
+  .markdown-body pre.command-line .comment {
+    color: #ccc; }
+
+  .markdown-body pre.command-line .output {
+    color: #63E463; }
+
+  .markdown-body pre.command-line .output span {
+    position: fixed;
+    top: -1000px;
+    left: -1000px; }
 }
