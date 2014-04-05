@@ -1,11 +1,17 @@
-{$} = require 'atom'
+if window.atom
+  {$} = require 'atom'
+else
+  $ = require 'jquery'
+
 _s = require 'underscore.string'
+
 ADMONITIONS = ["tip", "warning", "error"]
 OSES = ["mac", "windows", "linux", "all"]
 
 module.exports =
   replaceIntro: ->
-    $(".markdown-preview p:contains('{{#intro}}')").each (idx, el) ->
+    introQuery = "p:contains('{{\#intro}}')"
+    $(".markdown-preview #{introQuery}, .markdown-body #{introQuery}").each (idx, el) ->
       contents = $(el).nextUntil("p:contains('{{/intro}}')");
       contents.next().remove()
       $(el).replaceWith("<p class='intro'>" + contents.html() + "</p>")
@@ -44,7 +50,8 @@ module.exports =
 
   replaceOSBlocks: (type) ->
     for os in OSES
-      $(".markdown-preview p:contains('{{\##{os}}}')").each (idx, el) ->
+      osQuery = "p:contains('{{\##{os}}}')"
+      $(".markdown-preview #{osQuery}, .markdown-body #{osQuery}").each (idx, el) ->
         contents = $(el).nextUntil("p:contains('{{/#{os}}}')");
         contents.next().remove()
         tip_wrapper = $("<div class='platform-#{os}'>" + contents.html() + "</div>");
