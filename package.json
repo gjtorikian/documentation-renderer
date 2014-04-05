@@ -20,6 +20,7 @@
     "grunt-contrib-coffee": "~0.7.0",
     "grunt-contrib-less": "~0.5.1",
     "grunt-browserify": "~2.0.1",
-    "grunt-text-replace": "0.3.x"
+    "grunt-text-replace": "0.3.x",
+    "grunt-contrib-compress": "0.7.x"
   }
 }

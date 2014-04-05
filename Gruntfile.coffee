@@ -29,6 +29,13 @@ module.exports = (grunt) ->
       options:
         noParse: ['atom']
 
+  compressConfig =
+    main:
+      options:
+        archive: 'documentation-renderer.zip'
+      src: ['css/*', 'js/*', 'vendor/*', 'manifest.json', '*.crx', '*.pem']
+      dest: "."
+
   grunt.initConfig
     coffee:
       coffeeConfig
@@ -38,10 +45,16 @@ module.exports = (grunt) ->
       replaceConfig
     browserify:
       browserifyConfig
+    compress:
+      compressConfig
 
   grunt.loadNpmTasks('grunt-contrib-coffee')
   grunt.loadNpmTasks('grunt-contrib-less')
   grunt.loadNpmTasks('grunt-browserify')
   grunt.loadNpmTasks('grunt-text-replace')
 
+  grunt.loadNpmTasks('grunt-contrib-compress')
+
   grunt.registerTask('default', ['coffee', 'less', 'replace', 'browserify'])
+
+  grunt.registerTask('package', ['default', 'compress'])

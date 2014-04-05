@@ -11,3 +11,13 @@ A Chrome Extension to turn this:
 into this:
 
 ![screen shot 2013-12-06 at 2 51 58 pm](https://f.cloud.github.com/assets/64050/1696714/200890b2-5ec9-11e3-94c6-6e259399f8dc.png)
+
+## Installing
+
+### For Atom
+
+Just get the Documentation Renderer package.
+
+### For Chrome
+
+Grab it from [this hidden URL](https://chrome.google.com/webstore/detail/documentation-renderer/pgkficgmadihglbmgjfcebkamhaahkgk).
