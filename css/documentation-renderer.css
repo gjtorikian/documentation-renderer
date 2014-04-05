@@ -1,0 +1,196 @@
+.markdown-preview .intro,
+.markdown-body .intro {
+  color: #666666;
+}
+.markdown-preview pre.command-line,
+.markdown-body pre.command-line {
+  border: 2px solid #dddddd;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  -webkit-font-smoothing: auto;
+}
+.markdown-preview pre.command-line em,
+.markdown-body pre.command-line em {
+  color: #F9FE64;
+  font-style: italic;
+}
+.markdown-preview pre.command-line .command:before,
+.markdown-body pre.command-line .command:before {
+  content: "$ ";
+}
+.markdown-preview pre.command-line .comment,
+.markdown-body pre.command-line .comment {
+  color: #ccc;
+}
+.markdown-preview pre.command-line .output,
+.markdown-body pre.command-line .output {
+  color: #63E463;
+}
+.markdown-preview pre.command-line .output span,
+.markdown-body pre.command-line .output span {
+  position: fixed;
+  top: -1000px;
+  left: -1000px;
+}
+.markdown-preview .alert,
+.markdown-body .alert {
+  position: relative;
+  margin: 0 auto;
+  padding: 15px;
+  font-size: 12px;
+  color: #264c72;
+  border: 1px solid #97c1da;
+  border-radius: 3px;
+  background-color: #d8ebf8;
+  background: -moz-linear-gradient(#d8ebf8, #d0e3ef);
+  /* FF 3.6+ */
+
+  background: -webkit-linear-gradient(#d8ebf8, #d0e3ef);
+  /* Safari 5.1+, Chrome 10+ */
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#d8ebf8', endColorstr='#d0e3ef')";
+  /* IE8+ */
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+.markdown-preview .alert + .alert,
+.markdown-body .alert + .alert {
+  margin-top: 5px;
+}
+.markdown-preview .alert > *:first-child,
+.markdown-body .alert > *:first-child {
+  margin-top: 0;
+}
+.markdown-preview .alert > *:last-child,
+.markdown-body .alert > *:last-child {
+  margin-bottom: 0;
+}
+.markdown-preview .alert.warning,
+.markdown-body .alert.warning {
+  color: #613A00;
+  background-color: #ffe3c8;
+  background: -moz-linear-gradient(#ffe3c8, #f5dac0);
+  /* FF 3.6+ */
+
+  background: -webkit-linear-gradient(#ffe3c8, #f5dac0);
+  /* Safari 5.1+, Chrome 10+ */
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe3c8', endColorstr='#f5dac0')";
+  /* IE8+ */
+
+  border: 1px solid #dca874;
+}
+.markdown-preview .alert.error,
+.markdown-body .alert.error {
+  color: #9c2400;
+  background-color: #f8d8d8;
+  background: -moz-linear-gradient(#f8d8d8, #efd0d0);
+  /* FF 3.6+ */
+
+  background: -webkit-linear-gradient(#f8d8d8, #efd0d0);
+  /* Safari 5.1+, Chrome 10+ */
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8d8d8', endColorstr='#efd0d0')";
+  /* IE8+ */
+
+  border: 1px solid #da9797;
+}
+.markdown-preview .alert code,
+.markdown-body .alert code {
+  font-size: 12px;
+}
+.markdown-preview div.helper,
+.markdown-body div.helper,
+.markdown-preview div.platform-mac,
+.markdown-body div.platform-mac,
+.markdown-preview div.platform-windows,
+.markdown-body div.platform-windows,
+.markdown-preview div.platform-linux,
+.markdown-body div.platform-linux,
+.markdown-preview div.platform-all,
+.markdown-body div.platform-all {
+  margin: .7em 0;
+  position: relative;
+  border: 1px dashed;
+}
+.markdown-preview div.helper h4.header,
+.markdown-body div.helper h4.header {
+  height: 30px;
+  border: 1px solid #eaeaea;
+  border-bottom-color: #cacaca;
+  margin: 0;
+  min-width: 100%;
+}
+.markdown-preview div.helper h4.header a,
+.markdown-body div.helper h4.header a {
+  display: block;
+  padding: 0 0 0 32px;
+  color: #777;
+  font-size: 12px;
+  line-height: 31px;
+  font-weight: bold;
+  text-shadow: 0 1px 0 white;
+  cursor: pointer;
+  text-decoration: none;
+}
+.markdown-preview div.helper div.content,
+.markdown-body div.helper div.content {
+  padding: 20px;
+  border: solid #eaeaea;
+  border-width: 0 1px 1px 1px;
+}
+.markdown-preview div.helper div.content > p:first-child,
+.markdown-body div.helper div.content > p:first-child,
+.markdown-preview div.helper div.content > h3:first-child,
+.markdown-body div.helper div.content > h3:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+.markdown-preview div.helper div.content > p:last-child,
+.markdown-body div.helper div.content > p:last-child,
+.markdown-preview div.helper div.content > blockquote:last-child,
+.markdown-body div.helper div.content > blockquote:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.markdown-preview div.helper div.content blockquote,
+.markdown-body div.helper div.content blockquote {
+  margin: .7em 0;
+}
+.markdown-preview div.helper div.content img,
+.markdown-body div.helper div.content img {
+  max-width: 620px;
+}
+.markdown-preview .markdown-body pre.command-line,
+.markdown-body .markdown-body pre.command-line {
+  border: 2px solid #dddddd;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  -webkit-font-smoothing: auto;
+}
+.markdown-preview .markdown-body pre.command-line em,
+.markdown-body .markdown-body pre.command-line em {
+  color: #F9FE64;
+  font-style: italic;
+}
+.markdown-preview .markdown-body pre.command-line .command:before,
+.markdown-body .markdown-body pre.command-line .command:before {
+  content: "$ ";
+}
+.markdown-preview .markdown-body pre.command-line .comment,
+.markdown-body .markdown-body pre.command-line .comment {
+  color: #ccc;
+}
+.markdown-preview .markdown-body pre.command-line .output,
+.markdown-body .markdown-body pre.command-line .output {
+  color: #63E463;
+}
+.markdown-preview .markdown-body pre.command-line .output span,
+.markdown-body .markdown-body pre.command-line .output span {
+  position: fixed;
+  top: -1000px;
+  left: -1000px;
+}
