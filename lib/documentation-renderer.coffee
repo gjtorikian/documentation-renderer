@@ -1,4 +1,8 @@
-{$} = require 'atom'
+if window.atom
+  {$} = require 'atom'
+else
+  $ = require 'jquery'
+
 replacement = require './replacement'
 
 module.exports =

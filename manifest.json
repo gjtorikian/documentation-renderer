@@ -1,5 +1,5 @@
 {
-  "name": "DocsTools",
+  "name": "Documentation Renderer",
   "version": "0.0.1",
   "description": "Render documentation the right way on GitHub.com",
   "manifest_version": 2,
@@ -9,7 +9,10 @@
       "https://github.com/*/edit/*"
     ],
     "run_at": "document_end",
-    "css": ["css/docstools.css"],
-    "js": ["js/vendor/jquery-1.9.1.min.js", "js/docstools.js"]
+    "css": ["css/documentation-renderer.css"],
+    "js": [
+      "vendor/jquery-1.9.1.min.js",
+      "js/documentation-renderer-chrome.js"
+      ]
   }]
 }
