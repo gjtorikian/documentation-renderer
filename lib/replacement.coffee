@@ -18,7 +18,7 @@ module.exports =
       contents.remove()
 
   replaceCommandLine: ->
-    $(".markdown-preview code.lang-command-line").each (idx, el) ->
+    $(".markdown-preview code.lang-command-line, .markdown-body pre[lang='command-line'] code").each (idx, el) ->
       contents = $(el).html()
 
       contents = contents.split("\n").map (line) ->
@@ -32,7 +32,7 @@ module.exports =
       $(el).parent().replaceWith("<pre class='command-line'>" + contents.join("\n") + "</pre>")
 
   replaceHelper: ->
-    $(".markdown-preview code.lang-helper").each (idx, el) ->
+    $(".markdown-preview code.lang-helper, .markdown-body pre[lang='helper'] code").each (idx, el) ->
       contents = $(el).html()
 
       contents = contents.replace(/####\s*(.+)/, "<h4 class='header'>$1</h4>").replace(/\n/, "<div class='content'>").replace(/\n/, "</div>")
@@ -41,7 +41,8 @@ module.exports =
 
   replaceAdmonitions: (type) ->
     for type in ADMONITIONS
-      $(".markdown-preview p:contains('{{\##{type}}}')").each (idx, el) ->
+      typeQuery = "p:contains('{{\##{type}}}')"
+      $(".markdown-preview #{typeQuery}, .markdown-body #{typeQuery}").each (idx, el) ->
         contents = $(el).nextUntil("p:contains('{{/#{type}}}')");
         contents.next().remove()
         tip_wrapper = $("<div class='alert #{type}'>" + contents.html() + "</div>");
