@@ -1,7 +1,7 @@
 {
   "name": "documentation-renderer",
   "main": "./lib/documentation-renderer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Renders documentation the right way for Atom",
   "repository": "https://github.com/gjtorikian/documentation-renderer",
   "license": "MIT",
@@ -12,8 +12,7 @@
     "temp": "0.6.x",
     "wrench": "1.5.x",
     "underscore.string": "2.3.x",
-
-    "coffee-script" : "~ 1.6.3",
+    "coffee-script": "~ 1.6.3",
     "jquery": "2.1.x",
     "grunt": "~0.4.1",
     "grunt-cli": "~0.1.9",
