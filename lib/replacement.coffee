@@ -43,6 +43,7 @@ module.exports =
     for type in ADMONITIONS
       typeQuery = "p:contains('{{\##{type}}}')"
       $(".markdown-preview #{typeQuery}, .markdown-body #{typeQuery}").each (idx, el) ->
+        return true if $(el).has("pre, code").length
         contents = $(el).nextUntil("p:contains('{{/#{type}}}')");
         contents.next().remove()
         tip_wrapper = $("<div class='alert #{type}'>" + contents.html() + "</div>");
@@ -53,6 +54,7 @@ module.exports =
     for os in OSES
       osQuery = "p:contains('{{\##{os}}}')"
       $(".markdown-preview #{osQuery}, .markdown-body #{osQuery}").each (idx, el) ->
+        return true if $(el).has("pre, code").length
         contents = $(el).nextUntil("p:contains('{{/#{os}}}')");
         contents.next().remove()
         tip_wrapper = $("<div class='platform-#{os}'>" + contents.html() + "</div>");

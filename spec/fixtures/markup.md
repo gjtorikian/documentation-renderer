@@ -68,3 +68,15 @@ Sheeeeit, this is a problem: line two
 {{/error}}
 
 And that's the end
+
+And what about code tags? `{{#windows}}`
+
+This should not be in a tag.
+
+And what about pre tags?
+
+```
+{{#windows}}
+````
+
+This should not be in a tag.

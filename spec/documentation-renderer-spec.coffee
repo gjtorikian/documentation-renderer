@@ -17,7 +17,7 @@ renderMarkdown = (file) ->
     atom.workspaceView.trigger 'markdown-preview:toggle'
 
   waitsFor ->
-    [editorPane, previewPane] = atom.workspaceView.getPanes()
+    [editorPane, previewPane] = atom.workspaceView.getPaneViews()
     preview = previewPane.getActiveItem()
     preview?
 
@@ -42,46 +42,46 @@ describe "Documentation renderer package", ->
     atom.workspaceView.attachToDom()
 
   describe "when the markdown preview is triggered", ->
-    originalText = null
-    markdownText = null
 
     beforeEach ->
       atom.workspaceView.attachToDom()
 
       renderMarkdown("markup.md")
 
-    it "handles custom markdown", ->
-      describe "intro text", ->
-        expect(preview.find("p.intro")).toBeDefined()
-        expect(preview.text()).not.toMatch(/\#\{intro\}/)
+    it "handles intro text", ->
+      expect(preview.find("p.intro")).toBeDefined()
+      expect(preview.text()).not.toMatch(/\#\{intro\}/)
 
-      describe "command line", ->
-        expect(preview.find("span.command")).toBeDefined()
-        expect(preview.text()).not.toMatch(/pre class='command-line'/)
+    it "handles command line", ->
+      expect(preview.find("span.command")).toBeDefined()
+      expect(preview.text()).not.toMatch(/pre class='command-line'/)
 
-      describe "helper", ->
-        expect(preview.find("div.helper")).toBeDefined()
-        expect(preview.text()).not.toMatch(/pre class='helper'/)
+    it "handles helper", ->
+      expect(preview.find("div.helper")).toBeDefined()
+      expect(preview.text()).not.toMatch(/pre class='helper'/)
 
-      describe "oses", ->
-        expect(preview.find("div.platform-mac")).toBeDefined()
-        expect(preview.text()).not.toMatch(/\#\{mac\}/)
+    it "handles oses", ->
+      expect(preview.find("div.platform-mac")).toBeDefined()
+      expect(preview.text()).not.toMatch(/\#\{mac\}/)
 
-        expect(preview.find("div.platform-windows")).toBeDefined()
-        expect(preview.text()).not.toMatch(/\#\{windows\}/)
+      expect(preview.find("div.platform-windows")).toBeDefined()
+      expect(preview.text()).not.toMatch(/\#\{windows\}/)
 
-        expect(preview.find("div.platform-linux")).toBeDefined()
-        expect(preview.text()).not.toMatch(/\#\{linux\}/)
+      expect(preview.find("div.platform-linux")).toBeDefined()
+      expect(preview.text()).not.toMatch(/\#\{linux\}/)
 
-        expect(preview.find("div.platform-all")).toBeDefined()
-        expect(preview.text()).not.toMatch(/\#\{all\}/)
+      expect(preview.find("div.platform-all")).toBeDefined()
+      expect(preview.text()).not.toMatch(/\#\{all\}/)
 
-      describe "admonitions", ->
-        expect(preview.find("div.alert.tip")).toBeDefined()
-        expect(preview.text()).not.toMatch(/\#\{tip\}/)
+    it "handles admonitions", ->
+      expect(preview.find("div.alert.tip")).toBeDefined()
+      expect(preview.html()).not.toMatch(/\{\#tip\}/)
 
-        expect(preview.find("div.alert.warning")).toBeDefined()
-        expect(preview.text()).not.toMatch(/\#\{warning\}/)
+      expect(preview.find("div.alert.warning")).toBeDefined()
+      expect(preview.html()).not.toMatch(/\{\#warning\}/)
 
-        expect(preview.find("div.alert.error")).toBeDefined()
-        expect(preview.text()).not.toMatch(/\#\{error\}/)
+      expect(preview.find("div.alert.error")).toBeDefined()
+      expect(preview.html()).not.toMatch(/\{\#error\}/)
+
+    it "handles code tags", ->
+      expect(preview.find("div.platform-windows").length).toEqual(1)
