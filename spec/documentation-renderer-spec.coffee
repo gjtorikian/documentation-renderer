@@ -82,3 +82,6 @@ describe "Documentation renderer package", ->
 
       expect(preview.find("div.alert.error")).toBeDefined()
       expect(preview.html()).not.toMatch(/\{\#error\}/)
+
+    it "handles code tags", ->
+      expect(preview.find("div.platform-windows").length).toEqual(1)
