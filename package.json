@@ -1,7 +1,7 @@
 {
   "name": "documentation-renderer",
   "main": "./lib/documentation-renderer",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Renders documentation the right way for Atom",
   "repository": "https://github.com/gjtorikian/documentation-renderer",
   "license": "MIT",
