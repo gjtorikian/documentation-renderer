@@ -1,14 +1,13 @@
-if window.atom
-  {$} = require 'atom'
-else
-  $ = require 'jquery'
+$ = require 'jquery'
+{Emitter, Disposable, CompositeDisposable} = require 'atom'
+emitter = new Emitter
 
 replacement = require './replacement'
 
 module.exports =
 
   activate: (state) ->
-    atom.workspaceView.on 'markdown-preview:markdown-changed', @replace
+    emitter.on 'markdown-preview:markdown-changed', @replace
 
   replace: =>
     replacement.replaceIntro()

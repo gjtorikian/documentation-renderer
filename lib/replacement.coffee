@@ -1,7 +1,4 @@
-if window.atom
-  {$} = require 'atom'
-else
-  $ = require 'jquery'
+$ = require 'jquery'
 
 _s = require 'underscore.string'
 
